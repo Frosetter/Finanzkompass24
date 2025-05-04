@@ -1,0 +1,366 @@
+/*HAUPTTEXT IN DER MITTE*/
+    main {
+      flex: 1;
+      padding: 0rem 2rem 2rem;
+      overflow-y: auto;
+      background: var(--grey_10);
+      animation: slideIn 0.6s ease-in-out;
+      max-width: 1000px;
+
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    .searchInput{
+      width: 94%;
+      padding: 0.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border-radius: 8px 8px 8px 8px;
+    }
+
+    nav#nav {
+      background: var(--grey_70);
+      padding: 1rem;
+      overflow-y: auto;
+      z-index: 10;
+      min-width: 350px;
+    }
+
+    .nav-item, .nav-item-1, .nav-item-1-sub, .nav-item-2 {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0.9;
+    }
+    
+    .nav-item:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    
+    .nav-item-1:hover, .nav-item-1-sub:hover,.nav-item-2:hover {
+      transform: translateX(5px);
+      opacity: 1;
+    }
+
+    .nav-item {
+      cursor: pointer;
+      font-size: 18pt;
+      margin: 0.5rem 0;
+      color: var(--nav_item);
+      font-weight: 600;
+    }
+
+    .nav-item:hover{
+      color: var(--nav_item_hover);
+      text-shadow: 0 0 10px var(--rich-black);
+    }
+
+    .nav-item-1 {
+      font-size: 18pt;
+      margin-left: 4rem ;
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+      color: var(--nav_item1);
+      font-weight: 600;
+    }
+
+    .nav-item-1-sub {
+      font-size: 18pt;
+      margin-left: 1rem ;
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+      color: var(--nav_item1);
+      font-weight: 600;
+    }
+
+    .nav-item-2 {
+      font-size: 18pt;
+      margin-left: 5rem ;
+      margin-bottom: 0.3rem;
+      cursor: pointer;
+      color: var(--nav_item2);
+      font-weight: 600;
+    }
+
+    input::placeholder {
+      color: #888;        /* Grauer Placeholder */
+      font-style: italic; /* Optional: kursiv für Stil */
+    }
+
+    .submenu {
+      display: none;
+      opacity: 0;
+    }
+
+    .submenu.open {
+      display: block;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      opacity: 1;
+    }
+
+    .arrow {
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+    
+    .arrow.open {
+      transform: rotate(90deg);
+    }
+
+    body.dark .mobile-nav-button,
+    body.dark .back-button,
+    body.dark .show-submenu-button {
+      background-color: var(--info_dark);
+      color: #fff;
+    }
+
+    .mobile-nav-button, .back-button, .show-submenu-button {
+      display: none;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      cursor: pointer;
+    }
+
+    #audio-controls {
+      display: flex;
+      flex-wrap: wrap; /* Erlaubt Umbruch auf kleine Bildschirme */
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center; /* Buttons zentriert */
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    
+    /* Standard-Button-Styling */
+    #audio-controls button {
+      font-size: 1rem;
+      padding: 0.5rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    #audio-controls button:hover {
+      background-color: #f0f0f0;
+    }
+    
+    /* Lautstärkeregler */
+    #volume-slider {
+      width: 150px;
+    }
+
+    @media (min-width: 1200px) {
+      main {
+        margin-left: 100px; /* <-- NEU */
+        margin-right: auto; /* <-- NEU */
+        text-align: left; /* <-- Text rechtsbündig */
+
+      }
+      nav#nav {
+        margin-left: 6rem; /* Abstand vom linken Rand */
+      }
+    }
+
+    @media (min-width: 769px) {
+
+    }
+
+    @media (max-width: 768px) {
+     
+      nav#nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100%;
+        padding-top: 140px;
+        background: var(--grey_10);
+        z-index: 10;
+        display: none;
+
+      .container {
+        flex-direction: column;
+      }
+
+      }
+
+      nav#nav.open {
+        display: block;
+      }
+
+
+      .mobile-nav-button, .back-button, .show-submenu-button {
+        display: block;
+        font-size: 16pt;
+      }
+
+      main.hidden {
+        display: none;
+      }
+
+
+
+      
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    /* Overlay-Hintergrund */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Fenster */
+#overlay .popup {
+  font-size: 14pt;
+  background: white;
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 500px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: left;
+  position: relative;
+}
+
+#overlay .popup h1{
+  text-align: center;
+}
+
+/* Close Button */
+#overlay .popup button {
+  position: absolute;
+  height: 40px;
+  width: 40px;;
+  top: 10px;
+  right: 10px;
+  font-size: 18pt;
+  background: #e24e3a;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.definition {
+  text-decoration: none;       /* Keine Unterstreichung */
+  color: var(--dark_50);             /* Dunkelgrüne Schriftfarbe */
+  font-weight: 600;
+}
+
+.definition:visited {
+  color: rgb(83, 196, 92);             /* Auch nach dem Klicken bleibt dunkelgrün */
+}
+
+.definition:hover {
+  text-decoration: underline;   /* Optional: beim Hover leichte Unterstreichung für Benutzerfeedback */
+  color: rgb(94, 218, 94);
+}
+
+
+
+
+.accordion-item {
+  width: 100%;
+  background: transparent; /* Keine weiße Fläche! */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 9px 16px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+
+.accordion-toggle {
+  width: 100%;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 14pt;
+  background: var(--info);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+  border-radius: 8px 8px 0 0;
+}
+
+.accordion-content {
+  background: white; /* Nur hier! */
+  max-height: 0;
+  opacity: 0;
+  font-size: 14pt;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  padding: 0 1rem;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 500px;
+  opacity: 1;
+  padding: 1rem;
+  overflow-y: auto; /* Scrollbar aktivieren */
+}
+
+body.dark .accordion-content {
+  background: var(--grey_80); /* Nur hier! */
+}
+
+body.dark #audio-controls button {
+  background-color: var(--audio_button_dark);
+  border: 2px solid var(--grey_70);
+  color: var(--grey_10);
+}
+
+body.dark .searchInput{
+  background-color: var(--searchInput_dark);
+  color: var(--grey_10);
+}
+
+body.dark .accordion-toggle{
+  background-color: var(--info_dark);
+}
+
+body.dark #overlay .popup {
+  background-color: #302f3b;
+  color: #e2e2e2;
+}

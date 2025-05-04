@@ -1,0 +1,64 @@
+<!-- audio:blockchain.mp3 -->
+
+<h1>Block</h1>
+
+<ul class="content">
+  <li><strong>Eine Blockchain</strong> ist eine <a href="#" class="definition"
+      data-text="Glossar/Dezentralitaet.html">dezentrale</a>, verteilte Datenbank, die Informationen in Form von <a
+      href="#" class="definition" data-text="Glossar/Block.html">Blöcken</a> speichert und diese fälschungssicher
+    miteinander verknüpft.</li>
+  <li><strong>Jeder Block</strong> enthält eine Liste von Transaktionen oder Daten sowie einen eindeutigen
+    kryptografischen Hash des vorherigen Blocks.</li>
+  <li><strong>Durch das chronologische Verketten der Blöcke</strong> entsteht eine transparente und unveränderliche
+    Aufzeichnung aller bisherigen Transaktionen.</li>
+  <li><strong>Kryptografie</strong> sorgt dafür, dass die gespeicherten Daten manipulationssicher und vertrauenswürdig
+    bleiben.</li>
+  <li><strong>Dezentralität</strong> bedeutet, dass keine einzelne Institution Kontrolle hat – stattdessen verwalten
+    viele Knotenpunkte (Nodes) gemeinsam die Blockchain.</li>
+  <li><strong>Jeder Node</strong> besitzt eine vollständige Kopie der Blockchain und überprüft eigenständig neue
+    Transaktionen und Blöcke.</li>
+  <li><strong>Neue Blöcke</strong> werden nur dann hinzugefügt, wenn sie durch einen Konsensmechanismus – wie
+    Proof-of-Work (PoW) oder Proof-of-Stake (PoS) – im Netzwerk validiert wurden.</li>
+  <li><strong>Transparenz</strong> ist ein zentrales Merkmal: Jede Transaktion ist für alle Teilnehmer des Netzwerks
+    einsehbar.</li>
+  <li><strong>Sicherheit</strong> wird durch die Kombination aus dezentraler Verwaltung und starker Kryptografie
+    gewährleistet. Manipulationen wären extrem aufwendig und teuer.</li>
+  <li><strong>Direkte Transaktionen</strong> zwischen Parteien sind möglich – ganz ohne zentrale Vermittler wie Banken
+    oder Plattformen.</li>
+  <li><strong>Anwendungsgebiete</strong> sind vielfältig: Kryptowährungen, Supply Chain Management,
+    Finanzdienstleistungen, Gesundheitswesen, Identitätsmanagement und mehr.</li>
+  <li><strong>Die Blockchain-Technologie</strong> fördert Vertrauen, Effizienz und Innovation und schafft neue
+    Möglichkeiten für Geschäftsmodelle und Datenverwaltung.</li>
+  <li><strong>Neben öffentlichen Blockchains</strong> (z.B. Bitcoin oder Ethereum) existieren auch private und
+    konsortiale Blockchains, die speziell für Unternehmen entwickelt werden.</li>
+  <li><strong>Stetige Weiterentwicklung:</strong> Neue Konzepte wie Layer-2-Lösungen, Sharding oder optimierte
+    Konsensmechanismen verbessern laufend die Skalierbarkeit und Funktionalität von Blockchains.</li>
+</ul>
+
+<button onclick="toggleUseCases(this)" id="toggleButton"
+  style="margin-top: 2rem; padding: 0.7rem 1.5rem; background-color: #0077cc; color: white; border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+  <span>Anwendungsfälle anzeigen</span>
+  <span id="arrow" style="transition: transform 0.3s;">▲</span>
+</button>
+
+<div id="useCases"
+  style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out, opacity 0.3s; opacity: 0; margin-top: 1rem;">
+  <ul>
+    <li>Kryptowährungen (z. B. Bitcoin, Ethereum)</li>
+    <li>Digitale Identitäten</li>
+    <li>Supply Chain Tracking</li>
+    <li>Smart Contracts</li>
+    <li>Fälschungssichere Dokumente</li>
+    <li>Dezentrale Abstimmungen / Wahlen</li>
+  </ul>
+</div>
+
+<div id="overlay">
+  <div class="popup">
+    <button onclick="closePopup()">×</button>
+    <div id="popupText">Text hier...</div>
+
+
+
+  </div>
+</div>

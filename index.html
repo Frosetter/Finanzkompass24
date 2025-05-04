@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>Finanzkompass24</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style_global.css"> <!-- Externes Globale_CSS -->
+  <link rel="stylesheet" href="style_index.css"> <!-- Externes Zentrale_CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finanzlehre24</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+  <header>
+    <h1>
+      <img class="header_logo" src="../Images/Logo/Logo.png" alt="">
+    </h1>
+
+    <div>
+      <div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="Krypto/krypto.html">Krypto</a></li>
+            <li><a href="#" class="no_link">Finanzen</a></li>
+            <li><a href="#" class="no_link">Wirtschaft</a></li>
+            <li><a href="#" class="no_link">Mindset</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <button id="theme-toggle">☀️</button>
+      </div>
+    </div>
+
+  </header>
+<main>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <section class="slide">
+        <h2>Willkommen auf Finanzkompass24</h2>
+        <p>Schön, dass du hier gelandet bist.</p>
+        <p>Diese Website ist mehr als nur eine Sammlung von Themen – sie ist mein persönliches Abenteuer in die Welt des Mindsets, der Finanzen und der Kryptowährungen.
+        <p>Ich nehme dich mit auf meine dokumentierte Reise vom Lernenden zum Investor. </p>
+        <p>Jede Lektion, die ich auf diesem Weg erlebe, möchte ich hier mit dir teilen – offen, ehrlich und kostenlos.</p>
+      </section>  
+      <section class="slide">
+        <h2>Motivation</h2>
+        <p>Deine Finanzen, deine Freiheit – Lerne, wie du Geld intelligent anlegst und deine finanzielle Zukunft aktiv gestaltest.</p>
+      </section>
+      <section class="slide">
+        <h2>Ziel der Website</h2>
+        <p>Wir bieten klare und verständliche Informationen zu den Themen Finanzen, Kryptowährungen und wirtschaftliche Zusammenhänge, um dich bei deinen Entscheidungen zu unterstützen.</p>
+      </section>
+      <section class="slide">
+        <h2>Unsere Haltung</h2>
+        <p>Finanzbildung ist der Schlüssel zur finanziellen Unabhängigkeit. Wir glauben an Transparenz, Objektivität und praxisorientiertes Wissen.</p>
+      </section>
+    </div>
+    <button  class="nav-btn left" onclick="prevSlide()">
+      <img id="left_icon" src="Icons/Pfeil_Links_Whitemode.png" style="height: 50px;">
+    </button>
+    <button class="nav-btn right" onclick="nextSlide()">
+      <img id="right_icon" src="Icons/Pfeil_Rechts_Whitemode.png" style="height: 50px;">
+    </button>
+  </div>
+</main>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <nav class="footer-links">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">Kontakt</a>
+      </nav>
+      <div class="footer-copy">&copy; 2025 Finanzkompass24. Alle Rechte vorbehalten.</div>
+    </div>
+  </footer>
+
+  <script src="script_index.js"></script> <!-- Externes JavaScript -->
+
+</body>
+</html>

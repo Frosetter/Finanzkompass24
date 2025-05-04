@@ -1,0 +1,103 @@
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn.left {
+  position: absolute;
+  top: 50%;
+
+  left: 10px;
+}
+
+.nav-btn.right {
+  position: absolute;
+  top: 50%;
+
+  right: 10px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px 80px 80px 80px;
+  text-align: center;
+
+}
+
+.slide h2{
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--dark_90);
+}
+
+.slide p{
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--dark_90);
+}
+
+@media (max-width: 425px) {
+  .slider-container {
+    position: relative;
+    max-width: 390px;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px 60px 60px 60px;
+    text-align: center;
+  }
+}
+
+body.dark .slide h2{
+  color: var(--dark_20);
+}
+
+body.dark .slide p{
+  color: var(--grey_10);
+}
+
+body.dark #left_icon{
+  content: url('Icons/Pfeil_Links_Darkmode.png');
+}
+
+body.dark #right_icon{
+  content: url('Icons/Pfeil_Rechts_Darkmode.png');
+}

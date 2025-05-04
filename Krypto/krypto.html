@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <title>FinanzKompass24</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../style_global.css"> <!-- Externes Globale_CSS -->
+  <link rel="stylesheet" href="style_krypto.css"> <!-- Externes CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>
+      <img class="header_logo" src="../Images/Logo/Logo.png" alt="">
+    </h1>
+    <button class="theme-toggle" id="theme-toggle">☀️</button>
+    <nav class="main-nav">
+      <ul>
+          <!-- NAVIGATION -->
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="#" class="no_link">Finanzen</a></li>
+        <li><a href="#" class="no_link">Wirtschaft</a></li>
+        <li><a href="#" class="no_link">Mindset</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <button class="mobile-nav-button" onclick="openNav()">Themenauswahl</button>
+<!-- THEMENAUSWAHL -->
+  <div class="container">
+    <nav id="nav">
+<!-- SUCHE -->
+    <input class="searchInput" id="searchInput" placeholder="Thema suchen...">
+      <button class="back-button" onclick="closeNav()">Zuletzt angesehen</button>
+
+<!-- KRYPTOWÄHRUNGEN -->
+<div class="nav-item">
+  <span class="arrow" onclick="toggleSubmenu('kryptowaehrungen', event)">▶️</span>
+  <span onclick="load_html('kryptowaehrungen','Krypto/Kryptowaehrungen/Kryptowaehrungen.html')">Kryptowährungen</span>
+</div>
+<div class="submenu" id="kryptowaehrungen">
+  <div class="nav-item-1-sub">
+    <span class="arrow" onclick="toggleSubmenu('kryptoprojekte', event)">▶️</span>
+    <span onclick="load_html('kryptoprojekte','Krypto/Kryptowaehrungen/Kryptoprojekte.html')">Kryptoprojekte</span>
+  </div>
+  <div class="submenu" id="kryptoprojekte">
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/BTC.html')">Bitcoin (BTC)</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pos','Krypto/Kryptowaehrungen/ETH.html')">Ethereum (ETH)</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/USDT.html')">Tether (USDT)</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/XRP.html')">XRP</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/BNB.html')">BNB</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/SOL.html')">Solana (SOL)</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/USDC.html')">USDC</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/DOGE.html')">Dogecoin (DOGE)</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/ADA.html')">Cardano (ADA)</span></div>
+    <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Kryptowaehrungen/TRX.html')">TRON (TRX)</span></div>
+  </div>
+</div>
+<!-- BLOCKCHAIN -->
+      <div class="nav-item">
+        <span class="arrow" onclick="toggleSubmenu('blockchain', event)">▶️</span>
+        <span onclick="load_html('blockchain','Krypto/Blockchain/Blockchain.html')">Blockchain</span>
+      </div>
+      <div class="submenu" id="blockchain">
+        <div class="nav-item-1">
+          <span onclick="load_html('block','Krypto/Blockchain/Block.html')">Block</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('verkettung','Krypto/Blockchain/Verkettung.html')">Verkettung</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('dezentralitaet','Krypto/Blockchain/Dezentralitaet.html')">Dezentralität</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('kryptographie','Krypto/Blockchain/Kryptographie.html')">Kryptographie</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('hash','Krypto/Blockchain/Hash.html')">Hash</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('hash','Krypto/Blockchain/Node.html')">Node</span>
+        </div>
+        <div class="nav-item-1-sub">
+          <span class="arrow" onclick="toggleSubmenu('konsens', event)">▶️</span>
+          <span onclick="load_html('konsensmechanismen','Krypto/Blockchain/Konsensmechanismen.html')">Konsensmechanismen</span>
+        </div>
+        <div class="submenu" id="konsens">
+          <div class="nav-item-2"><span onclick="load_html('pow','Krypto/Blockchain/PoW.html')">Proof of Work</span></div>
+          <div class="nav-item-2"><span onclick="load_html('pos','Krypto/Blockchain/PoS.html')">Proof of Stake</span></div>
+        </div>
+        <div class="nav-item-1"><span onclick="load_html('transparenz','Krypto/Blockchain/Transparenz.html')">Transparenz & Sicherheit</span></div>
+      </div>
+<!-- Indikatoren -->
+      <div class="nav-item">
+        <span class="arrow" onclick="toggleSubmenu('indikatoren', event)">▶️</span>
+        <span onclick="load_html('indikatoren','Krypto/Indikatoren/Indikatoren.html')">Indikatoren</span>
+      </div>
+      <div class="submenu" id="indikatoren">
+        <div class="nav-item-1">
+          <span onclick="load_html('block','Krypto/Indikatoren/Indikatoren.html')">Trendlinien</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('verkettung','Krypto/Indikatoren/Indikatoren.html')">RSI</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('dezentralitaet','Krypto/Indikatoren/Indikatoren.html')">Moving Average</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('kryptographie','Krypto/Indikatoren/Indikatoren.html')">MACD</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('hash','Krypto/Indikatoren/Indikatoren.html')">Rollinger Bands</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('hash','Krypto/Indikatoren/Indikatoren.html')">Fibbonaccis</span>
+        </div>
+      </div>
+<!-- Bitcoin Zyklus -->
+      <div class="nav-item">
+        <span class="arrow" onclick="toggleSubmenu('zyklus', event)">▶️</span>
+        <span onclick="load_html('zyklus','Krypto/Zyklus/Zyklus.html')">Der Bitcoin-Zyklus</span>
+      </div>
+      <div class="submenu" id="zyklus">
+        <div class="nav-item-1">
+          <span onclick="load_html('zyklus','Krypto/Zyklus/Halving.html')">Halving</span>
+        </div>
+      </div>
+<!-- Technologien -->
+      <div class="nav-item">
+        <span class="arrow" onclick="toggleSubmenu('technologien', event)">▶️</span>
+        <span onclick="load_html('technologien','Krypto/Technologien/Technologien.html')">Technologien</span>
+      </div>
+      <div class="submenu" id="technologien">
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Smart_Contracts.html')">Smart Contracts</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/DeFi.html')">Dezentrale Finanzen (DeFi)</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/dApps.html')">Dezentrale Anwendungen (dApps)</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Tokenisierung.html')">Tokenisierung/ NFTs</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Web3.html')">CBDC</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Web3.html')">Web 3.0</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/KI.html')">Künstliche Intelligenz</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/KI.html')">Oracle (Datenbanksystem)</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Identitaet.html')">Identitätsverifikation</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Cloudrendering.html')">Cloudrendering</span>
+        </div>
+        <div class="nav-item-1">
+          <span onclick="load_html('technologien','Krypto/Technologien/Gaming.html')">Gaming</span>
+        </div>
+      </div>
+
+    </nav>
+<!-- Haupttext Mitte -->
+<main id="main">
+  <div id="audio-controls" style="display: flex; margin-bottom: 1rem;">
+    <!-- Buttons -->
+    <button onclick="rewindAudio()">⏪ 5s</button>
+    <button onclick="playAudio()">▶️</button>
+    <button onclick="pauseAudio()">⏸️</button>
+    <button onclick="stopAudio()">⏹️</button>
+    <button onclick="forwardAudio()">5s ⏩</button>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" onchange="changeVolume()">
+  </div>
+
+  <audio id="audio" src=""></audio>
+
+  <div id="main-content">
+    <h1>Kryptowährungen</h1>
+    <p>Wähle ein Thema aus der Gliederung.</p>
+  </div>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <nav class="footer-links">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">Kontakt</a>
+      </nav>
+      <div class="footer-copy">&copy; 2025 Finanzkompass24. Alle Rechte vorbehalten.</div>
+    </div>
+  </footer>
+</main>
+</div>
+
+
+<script src="script_krypto.js"></script> <!-- Externes JavaScript -->
+
+</body>
+
+
+</html>
